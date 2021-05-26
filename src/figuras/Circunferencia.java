@@ -10,10 +10,17 @@ public class Circunferencia {
 
 	public void imprimir() {
 		color = "rojo";
-		System.out.println("Diametro: " + 2 * radio);
+		double d = 2 * radio;
+		System.out.println("Diametro: " + d);
 		System.out.println("Color: " + color);
-		double area = 2 * 3.1416 * radio * radio;
+		final double pi = 3.1416;
+		double area = calcularArea(pi);
 		System.out.println(area);
+	}
+
+	private double calcularArea(final double pi) {
+		double area = 2 * pi * radio * radio;
+		return area;
 	}
 
 	public boolean esIgual(Circunferencia otro, boolean conDecimales) {
