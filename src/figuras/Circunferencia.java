@@ -1,24 +1,25 @@
+
+
 package figuras;
 
-public class Circunferencia {
+public class Circunferencia { /** clase Circunferencia */
 	private double radio;
 	private String color;
 
-	public Circunferencia(double radio) {
+	public Circunferencia(double radio) {  /** método constructor */
 		this.radio = radio;
 	}
 
-	public void imprimir() {
+	public void imprimir() { //** método imprimir caracteristicas */
 		color = "rojo";
 		System.out.println("Diametro: " + (2 * radio));
 		System.out.println("Color: " + color);
-		final double pi = 3.1416;
-		double area1 = 2 * pi * radio * radio;
+		double area1 = 2 * 3.1416 * radio * radio; /** formula para calcular el area de una circunferencia */
 		double area = area1;
 		System.out.println(area);
 	}
 
-	public boolean esIgual(boolean considerarDecimales, Circunferencia otro) {
+	public boolean esIgual(boolean considerarDecimales, Circunferencia otro) { //* Método para ver si circunferencias son iguales */
 		double radio1 = this.radio;
 		double radio2 = otro.getRad();
 		if (considerarDecimales) {
